@@ -1,0 +1,161 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samtex Solutions</title>
+    <link rel="stylesheet" href="ahu1-copy css/style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="dashboard01.css">
+</head>
+<body>
+
+    <nav class="nav-container1">
+        <div class="nav-left">
+            <a href="link1.html">
+                <img src="images/neobrand.jpg" alt="Image 1" class="neo-image">
+            </a>
+            <a href="link2.html">
+                <img src="images/clientlogo.png" alt="Image 2" class="neo-image">
+            </a>
+        </div>
+        <div class="d-flex align-items-center p-1">
+            <div class="log-in mr-3">
+                <span>Admin</span>
+                <span>|</span>
+                <a href="signout.html">Sign Out</a>
+            </div>
+            <div class="nav-center d-flex flex-column">
+                <img src="images/neosilica.png" alt="Company Logo" class="s-logo">
+                <div class="date-time">
+                    <p id="current-date-time" style="margin-bottom: 0px;"></p>
+                </div>
+            </div>
+        </div>
+        
+    </nav>
+    
+        <div class="sidebar">
+            <ul>
+                <li><a   href="dashboard01.html">Dashboard</a></li>
+                <li><a href="#">AHU</a></li>
+                <li><a href="chillers.html">Chillers</a></li>
+                <li><a href="analysis.html">Analysis</a></li>
+                <li><a href="reports.html">Reports</a></li>
+                <li><a href="alarms.html">Alarms</a></li>
+            </ul>
+        </div>
+      
+    <div class="container-fluid containerbg">
+          <!-- <span class="titleheading">Dashboard</span> -->
+                <div class="row">
+        
+               <div class="container-fluid mt-1">
+               <div class="row">
+        
+                       <div class="col-auto col-sm-4 order-first">
+                       <span class="ahutitle" class="tooltip" data-toggle="modal" data-target="#ahutemp"> AHU UNIT TYPE B</span> 
+              
+                        </div>
+                       
+                           <div class="col-auto col-sm-4 text-center">
+                           <button id="emg" class="emgbtn">Emergency</button>
+                           </div>
+        
+                        <div class="col-auto col-sm-4 order-last text-right zoneright">
+                            <span class="ahudropdown" >
+                                <select name="" id="ahu_select">
+                                    <option selected="selected">Select AHU</option>
+                                    <option value="ahueight.html">AHU 8</option>
+                                    <option value="ahutypea.html">AHU 5 (A)</option>
+                                    <option value="#">AHU 5 (B)</option>
+                                </select>
+                            </span>             
+                       </div>
+                   </div>  
+               </div>
+        
+        <div class="container-fluid text-center my-0 mx-0 ">
+               <object type="image/svg+xml" id="svg5238" data="svg/BBPL_AHU_UNIT_5B.svg"> </object>
+           </div>
+        
+            
+        <!-- ss temp  *******-->
+        <div class="modal fade" id="ahutemp" tabindex="-1" role="dialog" aria-labelledby="ahutemp" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+         <div class="modal-header">
+           <h5 class="modal-title" id="ahutemp">Supply Air Temperature</h5>
+           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+           </button>
+         </div>
+         <!--body -->
+         <div class="modal-body">
+         <table class="table table-sm setsensor">
+         <thead>   <tr>  <th>Setting</th> <th>Setpoint</th><th>&nbsp;</th> </tr></thead>
+        <tbody>
+        <tr style="display:none"><td>Initial Range </td> <td>
+        Min <input type="text" value="" style="width:70px;"  id="ahuir1"   disabled > 
+         Max <input type="text" value="" style="width:70px;"  id="ahuir2"  disabled > 
+        </td> <td>&nbsp;</td></tr>  
+        <tr> <td>Range Min</td> 
+        <td>
+        <div id="satspi1"></div>
+        </td> 
+        <td rowspan="2" style="text-align:center">
+        
+        <button type="button" class="btn btn-primary" id="rangeset">SetVal</button> </td></tr>
+        
+        
+        <tr> <td>Range Max</td>  <td>
+        <div id="satspi2"></div>
+        </td>  </tr>
+        <tr> <td>Setpoint</td>  <td> 
+        <div id="slider-range1">
+        
+        <div id="custom-handle" class="ui-slider-handle"></div>
+        
+        </div>
+        <div class="d-flex justify-content-between">
+        <div class="rmin" style=" margin-top: 10px;">
+               Min <span sytle=" font-weight: bold;" id="setalarmminval1">  0</span></div>
+        <div>&nbsp;</div><span>Max:</span><input type="text"    id="set4" readonly class="rangebar rangeval"></div>
+        
+        </div>
+         </td>
+            <td  style="text-align:center">
+         <button type="button" class="btn btn-primary" id="rangeset">Set</button></td>
+        </tr>
+        </tbody>
+        </table>
+         </div>
+         <!--body end -->
+        </div>
+        </div>
+        </div>
+        <!-- ss temp end *********-->
+        
+    </div> 
+
+
+    
+
+    
+
+    <button id="toggle-background" class="toggle-btn">
+        <i id="toggle-icon" class="fas fa-sun"></i>
+    </button>
+
+
+    <script src="js/ahu1copy.js"></script>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,121 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  color: #000;
+  line-height: 1em;
+  color: #fff;
+  background-image: radial-gradient(circle, #87979b 0%, #536775 71%, #34495e 100%) !important;
+}
+
+.login {
+  width: 100%;
+  height: 96vh;
+  border: dotted red 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /*Input */
+}
+
+.login .logo {
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0px;
+  padding: 4px;
+  top: -26px;
+  position: relative;
+  background-color: #ffffff;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.login .logo img {
+  width: 80%;
+  height: auto;
+}
+
+.login .loginbox {
+  width: 400px;
+  background: #3a4f62;
+  border-radius: 6px;
+  border: 0px solid #496989;
+  /*box-shadow: 3px 5px 3px 5px #dae6fa;*/
+  background-color: none;
+}
+
+.login .names {
+  padding: 2px 3px;
+  margin: 0 auto 6px auto;
+  width: 275px;
+  border: dotted red 0px;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+}
+
+.login input[type=text], .login [type=password] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: 0;
+  border: 1px solid  #c4c9e8;
+  background-color: #e7e9f7;
+  width: 250px;
+  border-radius: 4px;
+  padding: 6px 10px;
+  margin: 0 auto 10px auto;
+  display: block;
+  text-align: left;
+  font-size: 14px;
+  color: #000;
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+  font-weight: normal;
+}
+
+.login input[type=text]:hover, .login [type=password]:hover {
+  background-color: fade(white, 40%);
+}
+
+.login input[type=text]:focus, .login [type=password]:focus {
+  background-color: white;
+  width: 280px;
+  color: #131816;
+}
+
+.login .cbox {
+  display: inline !important;
+}
+
+/*end */
+button {
+  background: linear-gradient(45deg, #6c7ee2 0%, #429fec 89%);
+  border: 0;
+  padding: 6px 10px;
+  margin: 0 auto 10px auto;
+  color: #131816;
+  border-radius: 3px;
+  display: block;
+  width: 250px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+  margin-bottom: 50px;
+}
+
+button:hover {
+  background: linear-gradient(45deg, #429fec 0%, #6c7ee2 89%);
+}
+/*# sourceMappingURL=login.css.map */

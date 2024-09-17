@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samtex Solutions</title>
+    <link rel="stylesheet" href="ahu1-copy css/style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/dashboard01.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- toggle menu  -->
+</head>
+<body>
+
+    <nav class="nav-container1">
+        <div class="nav-left">
+            <a href="link1.html">
+                <img src="images/neobrand.jpg" alt="Image 1" class="neo-image">
+            </a>
+            <a href="link2.html">
+                <img src="images/clientlogo.png" alt="Image 2" class="neo-image">
+            </a>
+        </div>
+        <div class="d-flex align-items-center p-1 a2">
+            <div class="nav-center d-flex flex-column mr-3">
+                <img src="images/neosilica.png" alt="Company Logo" class="s-logo">
+                <div class="date-time">
+                    <p id="current-date-time" style="margin-bottom: 0px;"></p>
+                </div>
+            </div>
+            <div class="user-icon-container">
+                <i class="user-icon fa-regular fa-user"></i>
+                <div class="user-dropdown">
+                  <ul>
+                    <li><a href="#">Admin</a></li>
+                    <li><a href="#">Sign out</a></li>
+                    </ul>
+                </div>
+              </div>
+        </div>
+
+        <!-- my function toggle links -->
+        <a href="javascript:void(0);" class="icon  d-none" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+        <!-- my function toggle links end -->
+    </nav>
+        <div class="menu-button" onclick="toggleMenu()">☰</div>
+        <div class="sidebar d-flex flex-column justify-content-between align-items-center" id="sidebar">
+            <ul>
+                <li ><a class="text-left"  href="dashboard01.html" onclick="toggleMenu()"><i class="side-icons fas fa-desktop"></i>Dashboard</a></li>
+                <li><a class="text-left" href="ahutypeb3.html" onclick="toggleMenu()"><i class="side-icons fas fa-building"></i>AHU</a></li>
+                <li><a class="text-left"  href="chillers.html" onclick="toggleMenu()"><i class="side-icons fas fa-snowflake"></i>Chillers</a></li>
+                <li><a class="text-left" href="analysis.html" onclick="toggleMenu()"><i class="side-icons fas fa-chart-bar"></i>Analysis</a></li>
+                <li><a class="text-left"  href="report.html" onclick="toggleMenu()"><i class="side-icons fas fa-file-alt"></i>Reports</a></li>
+                <li><a class="text-left"  href="alarms.html" onclick="toggleMenu()"><i class="side-icons fas fa-bell"></i>Alarms</a></li>
+            </ul>
+
+        <!-- toggle icon to switch colors -->
+            <button id="toggleButton" onclick="toggleColors()">
+                <i id="starIcon" class="fas fa-star"></i>
+            </button>
+        <!-- toggle icon to switch colors -->
+            <footer>&copy; 2024 Samtex Solutions.All rights reserved</footer></div>
+        </div>
+        <div class="container-fluid containerbg">
+            <div class="row">
+                <div class="col-12 col-md-12">
+                    <div class="col-12 col-md-12 mt-2 ml-1">
+                        <div class="allitems">
+                            <div class="barbg">
+                                <div class="row">
+                                    <div class="col-auto col-sm-4 order-first">
+                                        <span class="ahutitle pl-2">AHU STATUS</span>
+                                    </div>
+                                    <div class="col-auto col-sm-8 order-last text-right pr-4 ahutitle title2">
+                                        AMBIENT <span>34</span>&#8451; &nbsp;<span>60</span>&#37; &nbsp;
+                                        <button id="emg" class="emgbtn">Emergency</button>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="itemszoneone">
+                                <div class="ahu">
+                                    <a href="ahutypeb.html">
+                                        <div class="ahuwarning">
+                                            <div class="ahuheading">AHU-2</div>
+                                            <div class="temp">
+                                                <div class="d-flex justify-content-start pr-3">
+                                                    <span>32</span> &#8451;
+                                                </div>
+                                                <div class="d-flex justify-content-end">
+                                                    <span>60</span> &#37;
+                                                </div>
+                                            </div>
+                                            <div class="off">off</div>
+                                        </div>
+                                    </a>
+        
+                                    <a href="#">
+                                        <div class="ahuruning">
+                                            <div class="ahuheading">AHU-5A</div>
+                                            <div class="temp">
+                                                <div class="d-flex justify-content-start pr-3">
+                                                    <span>32</span> &#8451;
+                                                </div>
+                                                <div class="d-flex justify-content-end">
+                                                    <span>60</span> &#37;
+                                                </div>
+                                            </div>
+                                            <div class="running">running</div>
+                                        </div>
+                                    </a>
+        
+                                    <div class="ahuruning">
+                                        <div class="ahuheading">AHU-3</div>
+                                        <div class="temp">
+                                            <div class="d-flex justify-content-start pr-3">
+                                                <span>32</span> &#8451;
+                                            </div>
+                                            <div class="d-flex justify-content-end">
+                                                <span>60</span> &#37;
+                                            </div>
+                                        </div>
+                                        <div class="running">running</div>
+                                    </div>
+        
+                                    <div class="ahuruning">
+                                        <div class="ahuheading">AHU-5B</div>
+                                        <div class="temp">
+                                            <div class="d-flex justify-content-start pr-3">
+                                                <span>32</span> &#8451;
+                                            </div>
+                                            <div class="d-flex justify-content-end">
+                                                <span>60</span> &#37;
+                                            </div>
+                                        </div>
+                                        <div class="running">running</div>
+                                    </div>
+        
+                                    <div class="ahuruning">
+                                        <div class="ahuheading">AHU-6</div>
+                                        <div class="temp">
+                                            <div class="d-flex justify-content-start pr-3">
+                                                <span>32</span> &#8451;
+                                            </div>
+                                            <div class="d-flex justify-content-end">
+                                                <span>60</span> &#37;
+                                            </div>
+                                        </div>
+                                        <div class="running">running</div>
+                                    </div>
+        
+                                    <div class="ahuruning">
+                                        <div class="ahuheading">AHU-7</div>
+                                        <div class="temp">
+                                            <div class="d-flex justify-content-start pr-3">
+                                                <span>32</span> &#8451;
+                                            </div>
+                                            <div class="d-flex justify-content-end">
+                                                <span>60</span> &#37;
+                                            </div>
+                                        </div>
+                                        <div class="running">running</div>
+                                    </div>
+        
+                                    <div class="ahuruning">
+                                        <div class="ahuheading">AHU-8A</div>
+                                        <div class="temp">
+                                            <div class="d-flex justify-content-start pr-3">
+                                                <span>32</span> &#8451;
+                                            </div>
+                                            <div class="d-flex justify-content-end">
+                                                <span>60</span> &#37;
+                                            </div>
+                                        </div>
+                                        <div class="running">running</div>
+                                    </div>
+        
+                                    <div class="ahuruning">
+                                        <div class="ahuheading">AHU-9</div>
+                                        <div class="temp">
+                                            <div class="d-flex justify-content-start pr-3">
+                                                <span>32</span> &#8451;
+                                            </div>
+                                            <div class="d-flex justify-content-end">
+                                                <span>60</span> &#37;
+                                            </div>
+                                        </div>
+                                        <div class="running">running</div>
+                                    </div>
+        
+                                    <div class="ahuruning">
+                                        <div class="ahuheading">AHU-10</div>
+                                        <div class="temp">
+                                            <div class="d-flex justify-content-start pr-3">
+                                                <span>32</span> &#8451;
+                                            </div>
+                                            <div class="d-flex justify-content-end">
+                                                <span>60</span> &#37;
+                                            </div>
+                                        </div>
+                                        <div class="running">running</div>
+                                    </div>
+        
+                                    <div class="ahuruning">
+                                        <div class="ahuheading">AHU-8B</div>
+                                        <div class="temp">
+                                            <div class="d-flex justify-content-start pr-3">
+                                                <span>32</span> &#8451;
+                                            </div>
+                                            <div class="d-flex justify-content-end">
+                                                <span>60</span> &#37;
+                                            </div>
+                                        </div>
+                                        <div class="running">running</div>
+                                    </div>
+        
+                                    <div class="ahuruning">
+                                        <div class="ahuheading">AHU-12</div>
+                                        <div class="temp">
+                                            <div class="d-flex justify-content-start pr-3">
+                                                <span>32</span> &#8451;
+                                            </div>
+                                            <div class="d-flex justify-content-end">
+                                                <span>60</span> &#37;
+                                            </div>
+                                        </div>
+                                        <div class="running">running</div>
+                                    </div>
+        
+                                    <div class="ahuruning">
+                                        <div class="ahuheading">AHU-13</div>
+                                        <div class="temp">
+                                            <div class="d-flex justify-content-start pr-3">
+                                                <span>32</span> &#8451;
+                                            </div>
+                                            <div class="d-flex justify-content-end">
+                                                <span>60</span> &#37;
+                                            </div>
+                                        </div>
+                                        <div class="running">running</div>
+                                    </div>
+        
+                                    <div class="ahuruning">
+                                        <div class="ahuheading">AHU-14</div>
+                                        <div class="temp">
+                                            <div class="d-flex justify-content-start pr-3">
+                                                <span>32</span> &#8451;
+                                            </div>
+                                            <div class="d-flex justify-content-end">
+                                                <span>60</span> &#37;
+                                            </div>
+                                        </div>
+                                        <div class="running">running</div>
+                                    </div>
+        
+                                    <div class="ahuruning">
+                                        <div class="ahuheading">AHU-15</div>
+                                        <div class="temp">
+                                            <div class="d-flex justify-content-start pr-3">
+                                                <span>32</span> &#8451;
+                                            </div>
+                                            <div class="d-flex justify-content-end">
+                                                <span>60</span> &#37;
+                                            </div>
+                                        </div>
+                                        <div class="running">running</div>
+                                    </div>
+        
+                                    <div class="ahuruning">
+                                        <div class="ahuheading">AHU-16A</div>
+                                        <div class="temp">
+                                            <div class="d-flex justify-content-start pr-3">
+                                                <span>32</span> &#8451;
+                                            </div>
+                                            <div class="d-flex justify-content-end">
+                                                <span>60</span> &#37;
+                                            </div>
+                                        </div>
+                                        <div class="running">running</div>
+                                    </div>
+        
+                                    <div class="ahuwarning">
+                                        <div class="ahuheading">AHU-16B</div>
+                                        <div class="temp">
+                                            <div class="d-flex justify-content-start pr-3">
+                                                <span>32</span> &#8451;
+                                            </div>
+                                            <div class="d-flex justify-content-end">
+                                                <span>60</span> &#37;
+                                            </div>
+                                        </div>
+                                        <div class="off">off</div>
+                                    </div>
+        
+                                    <div class="ahuruning">
+                                        <div class="ahuheading">AHU-17</div>
+                                        <div class="temp">
+                                            <div class="d-flex justify-content-start pr-3">
+                                                <span>32</span> &#8451;
+                                            </div>
+                                            <div class="d-flex justify-content-end">
+                                                <span>60</span> &#37;
+                                            </div>
+                                        </div>
+                                        <div class="running">running</div>
+                                    </div>
+        
+                                    <div class="ahuruning">
+                                        <div class="ahuheading">AHU-18</div>
+                                        <div class="temp">
+                                            <div class="d-flex justify-content-start pr-3">
+                                                <span>32</span> &#8451;
+                                            </div>
+                                            <div class="d-flex justify-content-end">
+                                                <span>60</span> &#37;
+                                            </div>
+                                        </div>
+                                        <div class="running">running</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <script src="js/customScript.js"></script>
+    <script src="js/dashboard01.js"></script>
+</body>
+</html>

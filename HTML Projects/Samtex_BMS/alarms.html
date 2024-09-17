@@ -1,0 +1,202 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samtex Solutions</title>
+    <link rel="stylesheet" href="ahu1-copy css/style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+<body>
+
+    <nav class="nav-container1">
+        <div class="nav-left">
+            <a href="link1.html">
+                <img src="images/neobrand.jpg" alt="Image 1" class="neo-image">
+            </a>
+            <a href="link2.html">
+                <img src="images/clientlogo.png" alt="Image 2" class="neo-image">
+            </a>
+        </div>
+        <div class="d-flex align-items-center p-1">
+            <div class="log-in mr-3">
+                <span>Admin</span>
+                <span>|</span>
+                <a href="signout.html">Sign Out</a>
+            </div>
+            <div class="nav-center d-flex flex-column">
+                <img src="images/neosilica.png" alt="Company Logo" class="s-logo">
+                <div class="date-time">
+                    <p id="current-date-time" style="margin-bottom: 0px;"></p>
+                </div>
+            </div>
+        </div>
+        
+    </nav>
+    
+        <div class="sidebar">
+            <ul>
+                <li><a   href="dashboard01.html">Dashboard</a></li>
+                <li><a href="ahutypeb3.html">AHU</a></li>
+                <li><a href="chillers.html">Chillers</a></li>
+                <li><a href="analysis.html">Analysis</a></li>
+                <li><a href="reports.html">Reports</a></li>
+                <li><a href="#alarms">Alarms</a></li>
+            </ul>
+        </div>
+      
+        <div class="container-fluid containerbg mt-4 mb-5 ">
+            <div class="row">
+            <div class="container bg-light rounded pb-3" style="height:auto">
+                    <div class="row">
+                            <div class="col-sm-12 px-2">
+                                <span class="heading">Alarms</span></div>
+    
+                                <div class="col-sm-12 col-md-10  px-2 py-2 m-auto">
+                                <form class="form-row formbg">
+                                       <div class="form-group col-md-3"> 
+                                                <label> From Data:</label> <input type="text" class="form-control" id="datepicker1"></div>
+    
+                                             <div class="form-group col-md-3"> 
+                                             <label> To Data:</label> <input type="text" class="form-control" id="datepicker2"></div>
+    
+                                               <div class="form-group col-md-3">  <label>Typer:</label>
+                                                   <select name="ahu" class="form-control" id="ahutype"> 
+                                                   <option>Temp</option></select></div>
+    
+                                                    <div class="form-group col-md-2  pt-4">   
+                                                     <img src="images/excel.jpg" alt=""> <a href="#">Export</a> | 
+                                                <img src="images/pdf.jpg" alt=""> <a href="#">Export</a>
+                                                    </div>
+                                                       <div class="form-group col-md-1 pt-3"> 
+                                                           <button type="submit" class="btn btn-primary btn-sm mt-3">Go</button></div>
+                                             </div>  	
+                                     </form>
+                                    
+                                <div class="col-sm-12 col-md-10 datatable px-2 py-2 m-auto">
+                                <table>
+                        <tbody><tr>
+                            <th>&nbsp;</th><th>Critical</th><th>Warning</th><th>Information</th><th>Total</th>
+                        </tr>
+                        <tr>
+                            <th>Raised</th><td><span class="critical" id="criticalRaised">11</span></td><td><span class="warning" id="warningRaised">729339</span></td><td><span class="info" id="infoRaised">7783</span></td><td><span class="info" id="totalRaised">737133</span></td>
+                        </tr>
+                        <tr>
+                            <th>Resolved</th><td><span class="critical" id="criticalResolved">11</span></td><td><span class="warning" id="warningResolved">727767</span></td><td><span class="info" id="infoResolved">7770</span></td><td><span class="info" id="totalResolved">735548</span></td>
+                        </tr>
+                        <tr>
+                            <th>Acknowledged</th><td><span class="critical" id="criticalAck">0</span></td><td>&nbsp;</td><td>&nbsp;</td><td><span class="info" id="totalAck">0</span></td>
+                        </tr>
+                        <tr>
+                            <th>Raised Unacknowledged</th><td><span class="critical" id="criticalUnack">0</span></td><td>&nbsp;</td><td>&nbsp;</td><td><span class="info" id="totalUnack">0</span></td>
+                        </tr>
+                    </tbody></table>
+                                </div>
+                            </div>
+    
+                            <!--table -->
+                            <div class="col-sm-12 px-0 py-0 m-auto"  style="overflow-x:auto;">
+                                 
+                            <table id="alarmtable" class="display ">
+                  <thead>   
+                      <tr>
+                          <th>Sl</th>
+                          <th> Office/Area</th>
+                          <th>Device </th>
+                          <th>Description </th>
+                          <th>Raised Time</th>
+                          <th>Resolved Time</th>
+                          <th>Severity </th>
+                          <th>Status</th>
+                          <th>ACK/Remakrs</th>
+                      </tr>
+                      </thead>
+                      <thead> 
+                     <tr>
+                     <td> &nbsp;</td>
+                          <td>  <input type="text" class="datatable"> </td>
+                          <td><input type="text" class="datatable"></td>
+                          <td> <input type="text" class="datatable"></td>
+                          <td> </td>
+                          <td> </td>
+                          <td><select id=""  class="datatable"><option value="1">Select 1</option><option value="1">Select 1</option></select></td>
+                          <td> <select id=""  class="datatable"><option value="1">Select 1</option><option value="1">Select 1</option></select></td>
+                          <td> <select id=""  class="datatable"><option value="1">Select 1</option><option value="1">Select 1</option></select></td>
+                  </tr>
+                  </thead>
+    
+                  <tbody>
+                      <tr> 
+                          <td>1</td>  <td >IR11-GW	 </td>  <td >IR1:Panel</td>  <td>TRF-3 WTI  OK</td> <td>13-02-2018 12:50:23</td> 
+                          <td>13-02-2018 12:50:27</td>  <td>Warning	Resolved</td>  <td>&nbsp;</td>  <td>&nbsp;</td></tr>
+                          <tr> <td>2</td>  <td >IR1-GW	 </td>  <td >IR1:Panel</td>  <td>TRF-3 WTI  OK</td> <td>13-02-2018 12:50:23</td> 
+                          <td>13-02-2018 12:50:27</td>  <td>Warning	Resolved</td>  <td>&nbsp;</td>  <td>&nbsp;</td></tr>
+                          <tr> <td>3</td>  <td >IR1-GW	 </td>  <td >IR1:Panel</td>  <td>TRF-3 WTI  OK</td> <td>13-02-2018 12:50:23</td> 
+                          <td>13-02-2018 12:50:27</td>  <td>Warning	Resolved</td>  <td>&nbsp;</td>  <td>&nbsp;</td></tr>
+                          <tr> <td>4</td>  <td >IR1-GW	 </td>  <td >IR1:Panel</td>  <td>TRF-3 WTI  OK</td> <td>13-02-2018 12:50:23</td> 
+                          <td>13-02-2018 12:50:27</td>  <td>Warning	Resolved</td>  <td>&nbsp;</td>  <td>&nbsp;</td></tr>
+                          <tr> <td>5</td>  <td >IR1-GW	 </td>  <td >IR1:Panel</td>  <td>TRF-3 WTI  OK</td> <td>13-02-2018 12:50:23</td> 
+                          <td>13-02-2018 12:50:27</td>  <td>Warning	Resolved</td>  <td>&nbsp;</td>  <td>&nbsp;</td></tr>
+                          <tr> <td>6</td>  <td >IR1-GW	 </td>  <td >IR1:Panel</td>  <td>TRF-3 WTI  OK</td> <td>13-02-2018 12:50:23</td> 
+                          <td>13-02-2018 12:50:27</td>  <td>Warning	Resolved</td>  <td>&nbsp;</td>  <td>&nbsp;</td></tr>
+                          <tr> <td>7</td>  <td >IR1-GW	 </td>  <td >IR1:Panel</td>  <td>TRF-3 WTI  OK</td> <td>13-02-2018 12:50:23</td> 
+                          <td>13-02-2018 12:50:27</td>  <td>Warning	Resolved</td>  <td>&nbsp;</td>  <td>&nbsp;</td></tr>
+                          <tr> <td>8</td>  <td >IR1-GW	 </td>  <td >IR1:Panel</td>  <td>TRF-3 WTI  OK</td> <td>13-02-2018 12:50:23</td> 
+                          <td>13-02-2018 12:50:27</td>  <td>Warning	Resolved</td>  <td>&nbsp;</td>  <td>&nbsp;</td>
+                          <tr> <td>9</td>  <td >IR1-GW	 </td>  <td >IR1:Panel</td>  <td>TRF-3 WTI  OK</td> <td>13-02-2018 12:50:23</td> 
+                          <td>13-02-2018 12:50:27</td>  <td>Warning	Resolved</td>  <td>&nbsp;</td>  <td>&nbsp;</td></tr>
+                          <tr> <td>10</td>  <td >IR1-GW	 </td>  <td >IR1:Panel</td>  <td>TRF-3 WTI  OK</td> <td>13-02-2018 12:50:23</td> 
+                          <td>13-02-2018 12:50:27</td>  <td>Warning	Resolved</td>  <td>&nbsp;</td>  <td>&nbsp;</td></tr>
+    
+                          <td>11</td>  <td >IR1-GW	 </td>  <td >IR1:Panel</td>  <td>TRF-3 WTI  OK</td> <td>13-02-2018 12:50:23</td> 
+                          <td>13-02-2018 12:50:27</td>  <td>Warning	Resolved</td>  <td>&nbsp;</td>  <td>&nbsp;</td></tr>
+                          <tr> <td>12</td>  <td >IR1-GW	 </td>  <td >IR1:Panel</td>  <td>TRF-3 WTI  OK</td> <td>13-02-2018 12:50:23</td> 
+                          <td>13-02-2018 12:50:27</td>  <td>Warning	Resolved</td>  <td>&nbsp;</td>  <td>&nbsp;</td></tr>
+                          <tr> <td>13</td>  <td >IR1-GW	 </td>  <td >IR1:Panel</td>  <td>TRF-3 WTI  OK</td> <td>13-02-2018 12:50:23</td> 
+                          <td>13-02-2018 12:50:27</td>  <td>Warning	Resolved</td>  <td>&nbsp;</td>  <td>&nbsp;</td></tr>
+                          <tr> <td>14</td>  <td >IR1-GW	 </td>  <td >IR1:Panel</td>  <td>TRF-3 WTI  OK</td> <td>13-02-2018 12:50:23</td> 
+                          <td>13-02-2018 12:50:27</td>  <td>Warning	Resolved</td>  <td>&nbsp;</td>  <td>&nbsp;</td></tr>
+                          <tr> <td>15</td>  <td >IR1-GW	 </td>  <td >IR1:Panel</td>  <td>TRF-3 WTI  OK</td> <td>13-02-2018 12:50:23</td> 
+                          <td>13-02-2018 12:50:27</td>  <td>Warning	Resolved</td>  <td>&nbsp;</td>  <td>&nbsp;</td></tr>
+                          <tr> <td>16</td>  <td >IR1-GW	 </td>  <td >IR1:Panel</td>  <td>TRF-3 WTI  OK</td> <td>13-02-2018 12:50:23</td> 
+                          <td>13-02-2018 12:50:27</td>  <td>Warning	Resolved</td>  <td>&nbsp;</td>  <td>&nbsp;</td></tr>
+                          <tr> <td>17</td>  <td >IR1-GW	 </td>  <td >IR1:Panel</td>  <td>TRF-3 WTI  OK</td> <td>13-02-2018 12:50:23</td> 
+                          <td>13-02-2018 12:50:27</td>  <td>Warning	Resolved</td>  <td>&nbsp;</td>  <td>&nbsp;</td></tr>
+                          <tr> <td>18</td>  <td >IR1-GW	 </td>  <td >IR1:Panel</td>  <td>TRF-3 WTI  OK</td> <td>13-02-2018 12:50:23</td> 
+                          <td>13-02-2018 12:50:27</td>  <td>Warning	Resolved</td>  <td>&nbsp;</td>  <td>&nbsp;</td>
+                          <tr> <td>19</td>  <td >IR1-GW	 </td>  <td >IR1:Panel</td>  <td>TRF-3 WTI  OK</td> <td>13-02-2018 12:50:23</td> 
+                          <td>13-02-2018 12:50:27</td>  <td>Warning	Resolved</td>  <td>&nbsp;</td>  <td>&nbsp;</td></tr>
+                          <tr> <td>20</td>  <td >IR1-GW	 </td>  <td >IR1:Panel</td>  <td>TRF-3 WTI  OK</td> <td>13-02-2018 12:50:23</td> 
+                          <td>13-02-2018 12:50:27</td>  <td>Warning	Resolved</td>  <td>&nbsp;</td>  <td>&nbsp;</td>
+                        </tr>
+                      
+                      
+                  </tbody>
+                   
+              </table>
+                            </div> 
+                            <!--table end -->
+                  </div>
+            </div> 
+        </div>
+    
+
+    
+
+    <button id="toggle-background" class="toggle-btn">
+        <i id="toggle-icon" class="fas fa-sun"></i>
+    </button>
+
+
+    <script src="js/ahu1copy.js"></script>
+</body>
+</html>
+
+
+
+

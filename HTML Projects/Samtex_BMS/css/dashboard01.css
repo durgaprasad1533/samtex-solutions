@@ -1,0 +1,84 @@
+.sidebar ul li.selected,
+.sidebar ul li:focus {
+    background-color: #e8e8f5 !important; /* background color when clicked */
+}
+
+.sidebar ul li.selected a,
+.sidebar ul li:focus a {
+    color: #c9b805 !important; /* text color when clicked */
+}
+
+.user-icon {
+    color: white;
+    font-size: 24px;
+}
+
+.user-icon:hover {
+    color: #9cd019; /* change color on hover */
+    cursor: pointer; /* change cursor on hover */
+}
+.user-icon-container {
+    position: relative;
+  }
+  
+  .user-dropdown {
+    transform: translateX(-70%);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color:none;
+    border: none;
+    padding: 5px;
+    transition: opacity 0.3s ease-in-out;
+    width:100px;
+    font-size: 13px;
+    text-align: center;
+  }
+  
+  .user-dropdown ul {
+    list-style: none;
+    padding:5px;
+    margin: 0;
+    background-color: #ededed;
+    border: 2px solid #b0a9a9;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  
+  .user-dropdown li:last-child {
+    border-bottom: none;
+  }
+  
+  .user-dropdown a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .user-dropdown a:hover {
+    color: #1f9a77;
+  }
+  
+  .user-dropdown.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .user-dropdown:not(.show) {
+    opacity: 0;
+    visibility: hidden;
+  }
+/* icons fontr awesome */
+.side-icons {
+  font-size: 18px;
+  color: #2ec5d3;
+  margin-right: 10px;
+}
+
+.side-icons:hover {
+  color: #08dd4f; /* add a hover color */
+}
+
+  
